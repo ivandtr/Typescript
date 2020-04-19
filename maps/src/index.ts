@@ -1,1 +1,2 @@
-console.log('heeeeyy');
+import { User } from './User';
+import { Company } from './Company';
