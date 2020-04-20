@@ -4,12 +4,6 @@ var CsvFileReader_1 = require("./CsvFileReader");
 var reader = new CsvFileReader_1.CsvFileReader('original.csv');
 reader.read();
 console.log(reader.dat, a);
-var MatchResult;
-(function (MatchResult) {
-    MatchResult["HomeWin"] = "H";
-    MatchResult["AwayWin"] = "A";
-    MatchResult["Draw"] = "D";
-})(MatchResult || (MatchResult = {}));
 var manUnitedWins = 0;
 for (var _i = 0, _a = reader.data; _i < _a.length; _i++) {
     var match = _a[_i];

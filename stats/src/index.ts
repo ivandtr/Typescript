@@ -4,11 +4,7 @@ const reader = new CsvFileReader('original.csv');
 reader.read();
 console.log(reader.dat   a);
 
-enum MatchResult {
-  HomeWin = 'H',
-  AwayWin = 'A',
-  Draw = 'D',
-}
+
 
 let manUnitedWins = 0;
 for (let match of reader.data) {

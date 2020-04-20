@@ -17,6 +17,17 @@ var CsvFileReader = /** @class */ (function () {
             .split('\n')
             .map(function (row) {
             return row.split(',');
+        })
+            .map(function (row) {
+            return [
+                dateSTringToDAte(row[0]),
+                row[1],
+                row[2],
+                parseInt(row[3]),
+                parseInt(row[4]),
+                row[5],
+                row[6],
+            ];
         });
     };
     return CsvFileReader;
