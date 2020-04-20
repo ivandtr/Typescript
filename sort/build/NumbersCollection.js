@@ -12,7 +12,7 @@ var NumbersCollection = /** @class */ (function () {
         configurable: true
     });
     NumbersCollection.prototype.compare = function (leftIndex, rightIndex) {
-        return this.data[leftIndex] > this.data[leftIndex];
+        return this.data[leftIndex] > this.data[rightIndex];
     };
     NumbersCollection.prototype.swap = function (leftIndex, rightIndex) {
         var leftHand = this.data[leftIndex];
