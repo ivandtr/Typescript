@@ -1,7 +1,4 @@
 import { AxiosPromise, AxiosResponse } from 'axios';
-import { Attributes } from './Attributes';
-import { ApiSync } from './ApiSync';
-import { Eventing } from './Eventing';
 
 interface HasId {
   id?: number;
@@ -31,12 +28,12 @@ export class Model<T extends HasId> {
     private events: Events
   ) {}
 
-  get on() {
-    return this.events.on;
-  }
-
   get trigger() {
     return this.events.trigger;
+  }
+
+  get on() {
+    return this.events.on;
   }
 
   get get() {
