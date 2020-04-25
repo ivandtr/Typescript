@@ -17,8 +17,8 @@ export class Collection<T, K> {
 
   fetch(): void {
     axios.get(this.url).then((response: AxiosResponse) => {
-      response.data.forEach((value: K) => {
-        this.models.push(this.deserialize(value));
+      response.data.forEach((object: K) => {
+        this.models.push(this.deserialize(object));
       });
     });
 
