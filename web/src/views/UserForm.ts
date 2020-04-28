@@ -7,9 +7,13 @@ export class UserForm extends View<User, UserProps> {
     return {
       'click:.set-age': this.onSetAgeClick,
       'click:.set-name': this.onSetNameClick,
+      'click:.save-model': this.onSaveClick,
     };
   }
 
+  onSaveClick = (): void => {
+    this.model.save();
+  };
   onSetNameClick = (): void => {
     const input = this.parent.querySelector('input');
     if (input) {
@@ -24,12 +28,10 @@ export class UserForm extends View<User, UserProps> {
   template(): string {
     return `
       <div>
-        <h1>User Form</h1>
-        <div>User name: ${this.model.get('name')}
-        <div>User name: ${this.model.get('age')}
-        <input />
+        <input placeholder=${this.model.get('name')} />
         <button class="set-name">Change name</button>
         <button class="set-age">Set random age</button>
+        <button class="save-model">Save user</button>
       </div>
     `;
   }
