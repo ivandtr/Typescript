@@ -20,8 +20,7 @@ export class Collection<T, K> {
       response.data.forEach((object: K) => {
         this.models.push(this.deserialize(object));
       });
+      this.trigger('change');
     });
-
-    this.trigger('change');
   }
 }
